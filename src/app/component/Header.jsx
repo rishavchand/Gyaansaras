@@ -1,6 +1,10 @@
+
+import { UserButton } from '@clerk/nextjs';
+import { useAuth } from '@clerk/nextjs';
 import { useState } from 'react';
 
 export default function Navbar() {
+  const { isSignedIn } = useAuth();
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -18,18 +22,36 @@ export default function Navbar() {
 
         {/* Navigation Links */}
         <div className="hidden md:flex flex-grow justify-center justify-items-end space-x-6">
-          <a href="#" className="text-white hover:text-white">Home</a>
+          <a href="/" className="text-white hover:text-white">Home</a>
           <a href="#" className="text-white hover:text-white">Courses</a>
           <a href="#" className="text-white hover:text-white">About</a>
           <a href="#" className="text-white hover:text-white">Contact</a>
         </div>
 
         {/* Login Button */}
+
         <div className="hidden md:flex">
-          <a href="#" className="text-white hover:text-white border border-gray-300 px-4 py-2 rounded">
-            Login
-          </a>
-        </div>
+      {isSignedIn ? (
+        <UserButton />
+      ) : (
+        <a href="/sign-in" className="text-white hover:text-white border border-gray-300 px-4 py-2 rounded">
+          Login
+        </a>
+      )}
+    </div>
+        
+    <div
+        className={`md:hidden flex flex-col items-center ml-32`}
+      >
+    {isSignedIn ? (
+        <UserButton />
+      ) : (
+        <a href="/sign-in" className="text-white hover:text-white border border-gray-300 px-4 py-2 rounded">
+          Login
+        </a>
+      )}
+
+      </div>
 
         {/* Mobile Menu Button */}
         <button
@@ -42,21 +64,22 @@ export default function Navbar() {
             <span className="text-2xl">&#9776;</span> // Menu icon
           )}
         </button>
+
+
       </div>
+
+
 
       {/* Mobile Menu Links */}
       <div
-        className={`md:hidden flex flex-col items-center mt-4 space-y-2 ${
-          isOpen ? 'block' : 'hidden'
-        }`}
+        className={`md:hidden flex flex-col items-center mt-4 space-y-2 ${isOpen ? 'block' : 'hidden'
+          }`}
       >
         <a href="#" className="text-white hover:text-teal-300">Home</a>
         <a href="#" className="text-white hover:text-teal-300">Courses</a>
         <a href="#" className="text-white hover:text-teal-300">About</a>
         <a href="#" className="text-white hover:text-teal-300">Contact</a>
-        <a href="#" className="text-white hover:text-teal-300 border-gray-300 px-4 py-2 rounded">
-          Login
-        </a>
+
       </div>
     </nav>
   );
