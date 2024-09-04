@@ -1,9 +1,8 @@
 "use client"
 import React from 'react'
-import SideNavBar from '../component/Sidebar'
-import SessionDetails from '../component/SessionDetails'
-import Dashboard from '../component/DashHero'
-import TestSeries from '../component/TestSeries'
+
+import TestSeries from '@/app/component/TestSeries'
+import SideNavBar from '@/app/component/Sidebar'
 
 function page() {
   return (
@@ -11,10 +10,10 @@ function page() {
       
       <div className="flex min-h-screen">
     
-    <SideNavBar />
+    <SideNavBar/>
     
     <div className="flex-1 p-8 bg-gradient-to-b from-blue-200 to-green-200">
-      <Dashboard/>
+      <TestSeries/>
     </div>
   </div>
     </div>
