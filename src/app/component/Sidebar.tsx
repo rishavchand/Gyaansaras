@@ -1,5 +1,5 @@
 // components/SideNavBar.tsx
-
+"use client"
 import React from 'react';
 import Link from 'next/link';
 
@@ -25,21 +25,21 @@ const SideNavBar: React.FC = () => {
           <li className="mb-1">
             <Link href="/dashboard/sessions">
               <div className="block p-4 text-gray-600 hover:bg-gray-100 hover:text-gray-900 cursor-pointer">
-                Session Timing
+                Sessions
               </div>
             </Link>
           </li>
           <li className="mb-1">
-            <Link href="#">
+            <Link href="/dashboard/career-planning">
               <div className="block p-4 text-gray-600 hover:bg-gray-100 hover:text-gray-900 cursor-pointer">
                 Career Planning
               </div>
             </Link>
           </li>
           <li className="mb-1">
-            <Link href="/dashboard/create-team">
+            <Link href="/dashboard/connect">
               <div className="block p-4 text-gray-600 hover:bg-gray-100 hover:text-gray-900 cursor-pointer">
-                Create Team
+                Build Connection
               </div>
             </Link>
           </li>
@@ -58,23 +58,16 @@ const SideNavBar: React.FC = () => {
             </Link>
           </li>
           <li className="mb-1">
-            <Link href="#">
+            <Link href="/dashboard/contact-us">
               <div className="block p-4 text-gray-600 hover:bg-gray-100 hover:text-gray-900 cursor-pointer">
                 Contact Us
               </div>
             </Link>
           </li>
           <li className="mb-1">
-            <Link href="#">
+            <Link href="/dashboard/about-us">
               <div className="block p-4 text-gray-600 hover:bg-gray-100 hover:text-gray-900 cursor-pointer">
                 About Us
-              </div>
-            </Link>
-          </li>
-          <li className="mb-5">
-            <Link href="#">
-              <div className="block p-4 text-gray-600 hover:bg-gray-100 hover:text-gray-900 cursor-pointer">
-                Settings
               </div>
             </Link>
           </li>

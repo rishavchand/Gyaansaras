@@ -1,16 +1,17 @@
-import Chatbot from '@/app/component/Chatbot'
-import Library from '@/app/component/Library'
+
 import SideNavBar from '@/app/component/Sidebar'
 import React from 'react'
+import CareerPlanning from '@/app/component/CareerPlanning';
+import Chatbot from '@/app/component/Chatbot';
 
 function page() {
   return (
     <div className="flex min-h-screen">
     
-    <SideNavBar/>
+    <SideNavBar />
     
-    <div className="flex-1 p-8 bg-gradient-to-b from-blue-200 to-green-200">
-      <Library/>
+    <div className="flex-1 p-8 bg-gray-900">
+      <CareerPlanning/>
       <Chatbot/>
     </div>
   </div>
