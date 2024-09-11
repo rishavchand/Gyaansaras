@@ -8,7 +8,8 @@ const chatbotResponses = {
   courses: "We offer a variety of courses. Would you like to know more about Python, Java, or Web Development?",
   mentors: "Our expert mentors are here to guide you! You can schedule a session through the Career Planning section.",
   tests: "The test series helps you prepare better. Check out the 'Test Series' section for more details.",
-  default: "Sorry, I didn't understand that. Could you please rephrase?"
+  hi: "Hi how are you?",
+  default: "Sorry, I didn't understand that. Could you please rephrase?",
 };
 
 interface ChatMessage {
@@ -41,7 +42,9 @@ const Chatbot = () => {
       botResponse = chatbotResponses.tests;
     } else if (userMessageLower.includes("help")) {
       botResponse = chatbotResponses.help;
-    } else {
+    } else if (userMessageLower.includes("hi")) {
+      botResponse = chatbotResponses.hi;
+    }else {
       botResponse = chatbotResponses.default;
     }
 

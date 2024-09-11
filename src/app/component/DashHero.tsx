@@ -15,7 +15,7 @@ const Dashboard: React.FC = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* 1-on-1 Session Booking */}
-          <Link href="/book-session" passHref>
+          <Link href="/dashboard/career-planning" passHref>
             <div className="bg-blue-100 border border-blue-300 rounded-lg p-8 flex flex-col items-center text-center hover:bg-blue-200 transition-all duration-300 cursor-pointer">
               <h2 className="text-2xl font-semibold text-blue-800 mb-4">Book a 1-on-1 Session</h2>
               <p className="text-gray-600 mb-6">

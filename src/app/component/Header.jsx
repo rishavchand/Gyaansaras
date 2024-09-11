@@ -24,8 +24,8 @@ export default function Navbar() {
         <div className="hidden md:flex flex-grow justify-center justify-items-end space-x-6">
           <a href="/" className="text-white hover:text-white">Home</a>
           <a href="#" className="text-white hover:text-white">Courses</a>
-          <a href="#" className="text-white hover:text-white">About</a>
-          <a href="#" className="text-white hover:text-white">Contact</a>
+          <a href="/dashboard/about-us" className="text-white hover:text-white">About</a>
+          <a href="/dashboard/contact-us" className="text-white hover:text-white">Contact</a>
         </div>
 
         {/* Login Button */}

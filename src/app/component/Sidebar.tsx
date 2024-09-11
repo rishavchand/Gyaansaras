@@ -51,7 +51,7 @@ const SideNavBar: React.FC = () => {
             </Link>
           </li>
           <li className="mb-1">
-            <Link href="#">
+            <Link href="/dashboard/refer-and-earn">
               <div className="block p-4 text-gray-600 hover:bg-gray-100 hover:text-gray-900 cursor-pointer">
                 Refer & Earn
               </div>
